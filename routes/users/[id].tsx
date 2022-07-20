@@ -18,8 +18,8 @@ export default function User({ params, data }: PageProps) {
   // console.log(props);
   return (
     <Layout>
-      {data.map((e: Iperson) => (
-        <p>{e.name}</p>
+      {data.map((u: Iperson) => (
+        <p>{u.name}</p>
       ))}
       {params.id}
     </Layout>
