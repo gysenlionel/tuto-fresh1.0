@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
-
+import Layout from "../components/layouts.tsx";
 export default function about() {
-  return <div>about</div>;
+  return <Layout>about</Layout>;
 }
