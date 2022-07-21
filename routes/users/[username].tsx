@@ -54,7 +54,7 @@ export const handler: Handlers = {
 };
 
 export default function User({ params, data }: PageProps) {
-  console.log(data);
+  // console.log(data);
   const user: IUser = data;
   return (
     <Layout>

@@ -5,16 +5,20 @@
 import * as $0 from "./routes/about.tsx";
 import * as $1 from "./routes/index.tsx";
 import * as $2 from "./routes/users/[username].tsx";
+import * as $3 from "./routes/usersgit/github.tsx";
 import * as $$0 from "./islands/Counter.tsx";
+import * as $$1 from "./islands/SearchGIthubUser.tsx";
 
 const manifest = {
   routes: {
     "./routes/about.tsx": $0,
     "./routes/index.tsx": $1,
     "./routes/users/[username].tsx": $2,
+    "./routes/usersgit/github.tsx": $3,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
+    "./islands/SearchGIthubUser.tsx": $$1,
   },
   baseUrl: import.meta.url,
 };
