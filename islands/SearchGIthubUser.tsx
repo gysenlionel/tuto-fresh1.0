@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
 import { PageProps, Handlers } from "$fresh/server.ts";
+import { tw } from "../utils/twind.ts";
 
 interface IUser {
   login: string;
@@ -68,16 +69,30 @@ export default function SearchGIthubUser() {
             type="text"
             name="q"
             placeholder="Search Github user by Usermame"
+            class={tw`border rounded shadow-md px-4 py-2 w-72 mt-8`}
           />
-          <button type="submit">Search</button>
+          <button
+            type="submit"
+            class={tw`border rounded shadow-md px-4 py-2 bg-blue-800 text-white ml-4`}
+          >
+            Search
+          </button>
         </form>
       </section>
       {user?.name && (
-        <section>
+        <section class={tw`mt-10`}>
           <div>
-            <a href={user.html_url} target="_blank">
-              <p>{user.login}</p>
-              <img src={user.avatar_url} alt={user.login} />
+            <a
+              href={user.html_url}
+              target="_blank"
+              class={tw`flex flex-col justify-center items-center`}
+            >
+              <p class={tw`text-2xl text-center mb-4`}>{user.login}</p>
+              <img
+                class={tw`border rounded shadow-md w-36 h-36`}
+                src={user.avatar_url}
+                alt={user.login}
+              />
             </a>
           </div>
         </section>

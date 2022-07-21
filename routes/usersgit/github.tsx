@@ -4,6 +4,7 @@ import { useState } from "preact/hooks";
 import { PageProps, Handlers } from "$fresh/server.ts";
 import Layout from "../../components/layouts.tsx";
 import SearchGIthubUser from "../../islands/SearchGIthubUser.tsx";
+import { tw } from "@twind";
 
 export const handler: Handlers = {
   async GET(req, ctx) {
@@ -35,7 +36,11 @@ export const handler: Handlers = {
 export default function Github({ data }: PageProps) {
   return (
     <Layout>
-      <SearchGIthubUser />
+      <div class={tw`flex justify-center`}>
+        <div class={tw`m-auto`}>
+          <SearchGIthubUser />
+        </div>
+      </div>
     </Layout>
   );
 }
